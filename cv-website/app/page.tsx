@@ -3,6 +3,7 @@ import MainWindow from "../components/MainWindow";
 import LeftNavButton from "../components/LeftNavButton";
 import RightNavButton from "../components/RightNavButton";
 import BottomNavButton from "../components/BottomNavButton";
+import TopNavButton from "../components/TopNavButton";
 
 import { useState, useEffect } from "react";
 
@@ -15,10 +16,13 @@ export default function Home() { /* Render format of page here, update state var
 
   return (
     <main>
-      <MainWindow />
-      <LeftNavButton onClick={() => setCurrentPage(1)}/>
-      <RightNavButton />
-      <BottomNavButton />
+      <MainWindow currentPage={currentPage}/>
+      <LeftNavButton currentPage={currentPage} onClick={() => setCurrentPage(currentPage == 0 ? 1 :
+                                                                              currentPage == 3 ? 0 : -1
+      )}/>
+      <BottomNavButton currentPage={currentPage} onClick={() => setCurrentPage(currentPage == 0 ? 2 : -1)}/>
+      <RightNavButton currentPage={currentPage} onClick={() => setCurrentPage(currentPage == 0 ? 3 : 0)}/>
+      <TopNavButton currentPage={currentPage} onClick={() => setCurrentPage(0)}/>
     </main>
     
   );
