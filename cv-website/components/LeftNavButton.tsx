@@ -1,6 +1,13 @@
-export default function LeftNavButton() {
+'use client'
+import {useState, useEffect, MouseEventHandler} from 'react';
+
+type LeftNavButtonProps = {
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+export default function LeftNavButton({ onClick }: LeftNavButtonProps) {
     return (
-        <div className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer hover:border border-white">
+        <button onClick={onClick} className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer hover:italic hover:border border-black">
             <p>&lt;</p>
             <p>P</p>
             <p>R</p>
@@ -11,6 +18,6 @@ export default function LeftNavButton() {
             <p>T</p>
             <p>S</p>
             <p>&lt;</p>
-        </div>
+        </button>
     )
 }
