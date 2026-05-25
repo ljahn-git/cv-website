@@ -16,7 +16,9 @@ export default function Home() { /* Render format of page here, update state var
 
   return (
     <main>
+
       <MainWindow currentPage={currentPage}/>
+
       <LeftNavButton currentPage={currentPage} onClick={() => setCurrentPage(currentPage == 0 ? 1 :
                                                                               currentPage == 3 ? 0 : -1
       )}/>

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --animate-move-up: fade-in 2.0s ease-out;
+
+    @keyframes fade-in {
+        from { transform: translate(1.5rem, 1.5rem); }
+        to { transform: translate(0, 0); }
+    }
+}
