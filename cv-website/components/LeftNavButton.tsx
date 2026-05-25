@@ -6,10 +6,10 @@ type LeftNavButtonProps = {
 export default function LeftNavButton({ currentPage, onClick }: LeftNavButtonProps) {
     return (
         <div>
-            {currentPage == 0 ? <button onClick={onClick} className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer hover:bg-gray-300 hover:italic hover:border-r-2 border-black">
+            {currentPage == 0 ? <button onClick={onClick} className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer font-bold hover:italic hover:bg-red-300 hover:border-r-2 border-black">
                 <p>&lt;</p> <p>P</p> <p>R</p> <p>O</p> <p>J</p> <p>E</p> <p>C</p> <p>T</p> <p>S</p> <p>&lt;</p>
             </button> : 
-                currentPage == 3 ? <button onClick={onClick} className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer hover:bg-gray-300 hover:italic hover:border-r-2 border-black">
+                currentPage == 3 ? <button onClick={onClick} className="absolute inset-0 w-12 flex flex-col p-1 items-center justify-center cursor-pointer hover:bg-red-300 font-bold hover:italic hover:border-r-2 border-black">
                 <p>&lt;</p> <p>H</p> <p>O</p> <p>M</p> <p>E</p> <p>&lt;</p>
             </button> : <></>}
         </div>
