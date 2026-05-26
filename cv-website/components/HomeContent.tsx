@@ -23,12 +23,13 @@ export default function HomeContent() {
                     </ul>
                 </div>
             </div>
+            
             <div className="flex flex-col text-xl">
                 <div className="flex">
-                    <p className="inline">My name is </p> <h1 className="inline italic text-9xl">Leo Jahn</h1>
+                    <p className="flex items-center text-center mr-4">My name is </p> <span className="flex"><h1 className="typewriter m-0 w-auto italic text-9xl">Leo Jahn</h1></span> {/* After page load replace with normal text? */}
                 </div>
-                <p>and I'm a 22 year old programmer/developer based out of Athens, Georgia.</p> <br/>
-                <p>I enjoy working on a little bit of everything, from React websites (like this one!), video games in Unity, and relational and document-oriented
+                <p className="mb-4">and I'm a 22 year old programmer/developer based out of Athens, Georgia.</p> <br/>
+                <p className="mb-4">I enjoy working on a little bit of everything, including React websites (like this one!), video games in Unity, and relational and document-oriented
                     databases. Specifically, I'd define my skills like this:
                 </p>
                 <br/>
@@ -47,7 +48,7 @@ export default function HomeContent() {
                 </ul>
 
                 <br/>
-                <p>I'm always open to opportunities, so feel free to reach out!</p>
+                <p className="mt-4">I'm always open to opportunities, so feel free to reach out!</p>
 
             </div>
 
