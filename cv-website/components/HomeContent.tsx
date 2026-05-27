@@ -2,13 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import "@/css-animations.css";
 
-export default function HomeContent() {
+type HomeContentProps = {
+    currentPage: number;
+}
+
+export default function HomeContent({ currentPage }: HomeContentProps) {
     return(
         // <p>Home test test</p>
         <div className=" h-full grid grid-cols-[25%_75%] gap-4">
             <div className="min-h-full grid grid-rows-[50%_50%] gap-4">
                 <div className="flex justify-center">
-                    <Image className="h-auto w-auto border rounded-4xl"
+                    <Image className="h-auto w-auto border-4 border-red-300 rounded-4xl"
                             src="/images/headshot.png"
                             height={144}
                             width={144}
@@ -16,17 +20,17 @@ export default function HomeContent() {
                 </div>
                 <div className="flex justify-center items-center underline text-xl">
                     <ul className="list-disc">
-                        <li><Link target="_blank" href="https://github.com/ltj05508">GitHub 1</Link></li>
-                        <li><Link target="_blank" href="https://github.com/ljahn-git">GitHub 2</Link></li>
-                        <li><Link target="_blank" href="https://www.linkedin.com/in/leo-jahn/">LinkedIn</Link></li>
-                        <li><Link target="_blank" href="https://app.joinhandshake.com/profiles/bzarhj">Handshake</Link></li>
+                        <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ltj05508">GitHub 1</Link></li>
+                        <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ljahn-git">GitHub 2</Link></li>
+                        <li><Link className="text-red-300 underline" target="_blank" href="https://www.linkedin.com/in/leo-jahn/">LinkedIn</Link></li>
+                        <li><Link className="text-red-300 underline" target="_blank" href="https://app.joinhandshake.com/profiles/bzarhj">Handshake</Link></li>
                     </ul>
                 </div>
             </div>
             
             <div className="flex flex-col text-xl">
                 <div className="flex">
-                    <p className="flex items-center text-center mr-4">My name is </p> <span className="flex"><h1 className="typewriter m-0 w-auto italic text-9xl">Leo Jahn</h1></span> {/* After page load replace with normal text? */}
+                    <p className="flex flex-nowrap whitespace-nowrap items-center text-center mr-4">My name is </p> <span className="flex"><h1 className={`${'typewriter'} m-0 w-auto italic text-9xl`}>Leo Jahn</h1></span> {/* After page load replace with normal text? */}
                 </div>
                 <p className="mb-4">and I'm a 22 year old programmer/developer based out of Athens, Georgia.</p> <br/>
                 <p className="mb-4">I enjoy working on a little bit of everything, including React websites (like this one!), video games in Unity, and relational and document-oriented

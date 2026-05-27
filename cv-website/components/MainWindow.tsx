@@ -11,8 +11,8 @@ type MainWindowProps = {
 export default function MainWindow({ currentPage }: MainWindowProps) {
     return(
         <div className="relative flex h-screen justify-center items-center bg-red-400">
-            <div className="overflow-y-scroll z-10 animate-move-up w-4/5 h-4/5 m-8 px-9 py-9 bg-white border border-8 rounded-4xl border-red-300">
-            {currentPage == 0 ? <HomeContent /> : 
+            <div className={`overflow-y-scroll z-10 animate-move-up w-4/5 h-4/5 m-8 px-9 py-9 bg-white border border-8 rounded-4xl border-red-300`}> {/*${currentPage == 0 ? "border-red-300" : ""} */}
+            {currentPage == 0 ? <HomeContent currentPage={currentPage}/> : 
                 currentPage == 1 ? <ProjectsContent /> : 
                     currentPage == 2 ? <EducationContent /> : 
                         currentPage == 3 ? <ExperiencesContent/> : <></>}
