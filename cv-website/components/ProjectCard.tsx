@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProjectModal from "../components/ProjectModal";
 
 type ProjectCardTypes = {
     image1: string;
@@ -17,8 +18,8 @@ type ProjectCardTypes = {
 export default function ProjectCard({image1, image1H, image1W, image2, image2W, image2H, image3, image3W, image3H, title, description}: ProjectCardTypes) {
     return(
         <div>
-        <button command="show-modal" commandfor={title} className="flex flex-col overflow-hidden h-full w-full border border-4 rounded-4xl border-red-300 bg-black cursor-pointer bg-white hover:bg-red-300 hover:shadow-2xl">
-            <div className="flex flex-col h-full w-full bg-red-500 overflow-hidden justify-center border-b-4 border-red-300">
+        <button command="show-modal" commandfor={title} className="flex flex-col overflow-hidden h-full w-full border border-4 rounded-4xl border-red-300 bg-black cursor-pointer bg-white shadow-xl hover:bg-red-300 ">
+            <div className="flex flex-col h-full w-full overflow-hidden justify-center border-b-4 ">
                 {/* <p>Projects Card 1</p>
                 <p>2-3 images that are cut off by the border. Card scales a bit when hovered over.</p> */}
                 <Image className="object-cover h-full w-full"
@@ -32,23 +33,14 @@ export default function ProjectCard({image1, image1H, image1W, image2, image2W, 
                             width={1530}
                             alt="Headshot of Leo Jahn"/>   */}
             </div>
-            <div className="flex h-1/6 w-full">
-            <p className="p-4 font-bold">{title}</p>
+            <div className="flex xl:h-1/5 h-1/3 w-full">
+                <p className="py-2 px-4 font-bold text-left">{title}</p>
             </div>
         </button>
 
         {/* Modal Window Code */}
-        <dialog id={title} className="justify-center items-center m-auto border-4">
-            <div>
-                <p>This dialog was opened using an invoker command.</p>
-                <Image className="h-full w-full"
-                            src={image2}
-                            height={image2H}
-                            width={image2W}
-                            alt="Project Image"/> 
-                <button commandfor={title} command="close">Close</button>
-            </div>
-        </dialog>
+        <ProjectModal image1={image1} image1H={image1H} image1W={image1W} image2={image2} image2H={image2H} image2W={image2W} image3={image3} image3H={image3H} image3W={image3W} title={title} description={description}/>
+        
         </div>
     )
 }
