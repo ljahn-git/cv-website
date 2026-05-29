@@ -55,6 +55,7 @@ export default function HomeContent({ currentPage }: HomeContentProps) {
                 <p className="mt-4">I'm always open to opportunities, so feel free to reach out!</p>
 
             </div>
+            
 
         </div>
     )
