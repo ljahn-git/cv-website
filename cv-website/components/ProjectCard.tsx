@@ -13,9 +13,11 @@ type ProjectCardTypes = {
     image3H: number;
     title: string;
     description: string;
+    description2: string;
+    description3: string;
 }
 
-export default function ProjectCard({image1, image1H, image1W, image2, image2W, image2H, image3, image3W, image3H, title, description}: ProjectCardTypes) {
+export default function ProjectCard({image1, image1H, image1W, image2, image2W, image2H, image3, image3W, image3H, title, description, description2, description3}: ProjectCardTypes) {
     return(
         <div>
         <button command="show-modal" commandfor={title} className="flex flex-col overflow-hidden h-full w-full border border-4 rounded-4xl border-red-300 bg-black cursor-pointer bg-white shadow-xl hover:bg-red-300 ">
@@ -39,7 +41,7 @@ export default function ProjectCard({image1, image1H, image1W, image2, image2W, 
         </button>
 
         {/* Modal Window Code */}
-        <ProjectModal image1={image1} image1H={image1H} image1W={image1W} image2={image2} image2H={image2H} image2W={image2W} image3={image3} image3H={image3H} image3W={image3W} title={title} description={description}/>
+        <ProjectModal image1={image1} image1H={image1H} image1W={image1W} image2={image2} image2H={image2H} image2W={image2W} image3={image3} image3H={image3H} image3W={image3W} title={title} description={description} description2={description2} description3={description3}/>
         
         </div>
     )
