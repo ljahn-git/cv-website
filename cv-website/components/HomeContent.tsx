@@ -31,6 +31,25 @@ export default function HomeContent({ currentPage }: HomeContentProps) {
             </div>
             
             <div className="flex flex-col text-xl">
+                <div className="md:hidden grid grid-cols-2 mb-4">
+                    <div className="relative flex h-full w-full object-scale-down pb-8">
+                    <Image className="border-4 border-red-300 object-cover rounded-4xl max-w-xs"
+                            src="/images/headshot.png"
+                            // height={144}
+                            // width={144}
+                            fill={true}
+                            // sizes="(max-width: 768px) 1vw, (max-width: 1200px) 50vw, 33vw"
+                            alt="Headshot of Leo Jahn"/>  
+                    </div>
+                    <div className="md:hidden flex my-4 justify-center items-center underline text-xl mb-8">
+                        <ul className="list-disc">
+                            <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ltj05508">GitHub 1</Link></li>
+                            <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ljahn-git">GitHub 2</Link></li>
+                            <li><Link className="text-red-300 underline" target="_blank" href="https://www.linkedin.com/in/leo-jahn/">LinkedIn</Link></li>
+                            <li><Link className="text-red-300 underline" target="_blank" href="https://app.joinhandshake.com/profiles/bzarhj">Handshake</Link></li>
+                        </ul>
+                    </div>
+                </div>
                 <div className="flex">
                     <p className="flex flex-nowrap whitespace-nowrap items-center text-center mr-4">My name is </p> <span className="flex"><h1 className={`${'typewriter'} m-0 w-auto italic text-4xl xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl`}>Leo Jahn</h1></span> {/* After page load replace with normal text? */}
                 </div>
@@ -55,16 +74,6 @@ export default function HomeContent({ currentPage }: HomeContentProps) {
 
                 <br/>
                 <p className="mt-4">I'm always open to opportunities, so feel free to reach out!</p>
-
-                <div className="md:hidden flex my-4 justify-center items-center underline text-xl">
-                    <ul className="list-disc">
-                        <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ltj05508">GitHub 1</Link></li>
-                        <li><Link className="text-red-300 underline" target="_blank" href="https://github.com/ljahn-git">GitHub 2</Link></li>
-                        <li><Link className="text-red-300 underline" target="_blank" href="https://www.linkedin.com/in/leo-jahn/">LinkedIn</Link></li>
-                        <li><Link className="text-red-300 underline" target="_blank" href="https://app.joinhandshake.com/profiles/bzarhj">Handshake</Link></li>
-                    </ul>
-                </div>
-
             </div>
             
 
