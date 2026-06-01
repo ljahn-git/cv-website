@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 export default function ProjectsContent() {
     return(
         // <p>Projects test test</p>
-        <div className="grid lg:grid-cols-6 md:grid-cols-3 h-full gap-2 ">
+        <div className="grid lg:grid-cols-6 md:grid-cols-3 md:h-full gap-2 ">
             {/* <div className="grid grid-rows-2 h-full">
                 <ProjectCard />
                 <ProjectCard />

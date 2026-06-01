@@ -1,7 +1,7 @@
 export default function EducationContent() {
     return(
         // <p>Education test test</p>
-        <div className="sm:h-full h-auto flex flex-col  text-xl gap-4">
+        <div className=" lg:h-full h-auto flex flex-col  text-xl gap-4">
             
             <div className="h-full md:grid grid-cols-[20%_80%] items-center justify-center p-4 border border-4 rounded-4xl border-red-300 shadow-lg">
                 <div className="h-auto p-8 w-full flex flex-col break-words text-2xl text-center justify-center items-center font-bold">
