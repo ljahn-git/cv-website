@@ -7,6 +7,15 @@ import TopNavButton from "../components/TopNavButton";
 
 import { useState, useEffect } from "react";
 
+import 'react'
+
+declare module 'react' {
+  interface ButtonHTMLAttributes<T> extends HTMLAttributes<T> {
+    commandFor?: string
+    command?: string
+  }
+}
+
 export default function Home() { /* Render format of page here, update state variable which selects which component to render based on button pressed */
   const [currentPage, setCurrentPage] = useState(0);
 
