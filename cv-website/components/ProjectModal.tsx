@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ProjectImageModal from "../components/ProjectImageModal";
 
 type ProjectModalTypes = {
@@ -49,10 +50,12 @@ export default function ProjectModal({image1, image1H, image1W, image2, image2W,
                                 alt="Project Image"/> 
                         </button>
                     </div>
+
+                    {/* Descriptive text below images */}
                     <div className="flex-col whitespace-pre-wrap text-xl">
                         <p>{description}</p>
                         {description2 ? <p className="mt-4">{description2}</p> : <></>}
-                        {description3 ? <p className="mt-4">{description3}</p> : <></>}
+                        {description3 ? <p className="mt-4">GitHub: <Link target="_blank" className="text-red-300 underline"href={description3}>{description3}</Link></p> : <></>}
                     </div>
                 
                 </div>

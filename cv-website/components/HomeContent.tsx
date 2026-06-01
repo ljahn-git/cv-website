@@ -74,7 +74,7 @@ export default function HomeContent({ currentPage }: HomeContentProps) {
                 </ul>
 
                 <br/>
-                <p className="mt-4">I'm always open to opportunities, so feel free to reach out!</p>
+                <p className="mt-4">I'm always open to opportunities, so feel free to reach out to me via <a className="text-red-300 underline"href="mailto:ljahn724@gmail.com">email</a>!</p>
             </div>
             
 
